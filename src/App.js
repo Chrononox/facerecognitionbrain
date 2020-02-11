@@ -4,6 +4,7 @@ import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
+import Signin from './Components/Signin/Signin';
 import Particles from 'react-particles-js';
 import './App.css';
 import Clarifai from 'clarifai';
@@ -70,6 +71,7 @@ class App extends React.Component {
       <div className="App">
         <Particles className="particles" params={partivlesOptions} />
         <Navigation />
+        <Signin />
         <Logo />
         <Rank />
         <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
