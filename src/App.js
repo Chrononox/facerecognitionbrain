@@ -35,7 +35,7 @@ class App extends React.Component {
       imageUrl: '',
       box: {},
       route: 'signin',
-      isSignedIn: 'false',
+      isSignedIn: false,
     }
   }
 
@@ -53,7 +53,6 @@ class App extends React.Component {
   }
 
   displayFaceBox = (box) =>{
-    console.log(box)
     this.setState({box: box})
   }
 
@@ -82,7 +81,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Particles className="particles" params={partivlesOptions} />
-        <Navigation onRouteChange={this.onRouteChange}/>
+        <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
 
         { this.state.route === 'home' ? 
             <div>
@@ -101,6 +100,5 @@ class App extends React.Component {
     );
   }
 }
- 
 
 export default App;
